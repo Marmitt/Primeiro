@@ -24,7 +24,7 @@ lab.test('retorno da soma de -5 e 6 deve ser 1', (done) => {
     Code.expect(soma(-5, 6)).to.equal(1);
     done();
 });
-lab.test('retorno da soma de -5 e -7 deve ser 1', (done) => {
+lab.test('retorno da soma de -5 e -7 deve ser -12', (done) => {
 
     Code.expect(soma(-5, -7)).to.equal(-12);
     done();
