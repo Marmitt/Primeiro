@@ -10,6 +10,8 @@ lab.test('retorno da soma de 2 e 3 deve ser 5', (done) => {
 
     Code.expect(soma(2, 3)).to.equal(5);
     done();
+    Code.expect(soma(2, 3, 5)).to.equal(10);
+    done();
 });
 lab.test('retorno da soma de -5 e 6 deve ser 1', (done) => {
 
@@ -36,4 +38,23 @@ lab.test('Soma nada com nada', (done) => {
   expect(r.message).to.equal("parâmentos invalidos")
   done();
 
+});
+lab.test('três parâmetros string', (done) => {
+    const r = soma(0, 1, 'c');
+    expect(r.message).to.equal("parâmentos inválidos")
+done();
+});
+lab.test('com array', (done) => {
+    const r = soma([1,2,3]);
+    expect(r.message).to.equal("parâmentos inválidos")
+    done();
+});
+lab.test('somando três números', (done) => {
+    expect(soma(3, 3, 3)).to.equal(9);
+    done();
+});
+lab.test('parâmetros mistos', (done) => {
+    const r = soma('a', 2, 'C', [1,2,3]);
+    expect(r.message).to.equal("parâmentos inválidos");
+    done();
 });
